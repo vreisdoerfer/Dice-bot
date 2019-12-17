@@ -11,7 +11,9 @@ function generateValues(message) {
 
     var bonus = stringHandler.bonusHandler(messageHolder);
 
-    if ((type === "d4" || type === "d6" || type === "d8" || type === "d10" || type === "d20" || type === "d100") && bonus != "invalid") {
+    var acceptedTypes = ["d4", "d6", "d8", "d10", "d20", "d100"];
+
+    if (acceptedTypes.includes(type) && bonus != "invalid") {
         var valuesString = "",
             valuesBonusString = "";
 
