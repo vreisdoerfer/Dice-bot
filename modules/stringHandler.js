@@ -5,8 +5,8 @@ function amountHandler(messageHolder) {
     if (messageHolder.match(/^\d*/)[0] != null) {
         var amount = parseInt(messageHolder.match(/^\d*/)[0]);
         if(!isNaN(amount)) {
-            if(amount > 400) {
-                return 400
+            if(amount > 100) {
+                return 100
             }
         }
         return amount;
