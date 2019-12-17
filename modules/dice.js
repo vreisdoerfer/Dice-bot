@@ -1,7 +1,7 @@
 const stringHandler = require('./stringHandler.js');
 
 function generateValues(message) {
-    var messageHolder = message.content.replace(/ /g, "").replace("!", "");
+    var messageHolder = message.content.replace(/ /g, "").replace("!", "").toLowerCase();
 
     var amount = stringHandler.amountHandler(messageHolder);
     messageHolder = messageHolder.replace(/^\d*/, "");
